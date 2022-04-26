@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/felixbehne/oil-storage-detection">
-    <img src="images/logo.svg" alt="Logo" width="200" height="200">
+    <img src="images/logo.svg" alt="Logo" width="300" height="300">
   </a>
   <h3 align="center">Oil Storage Detection</h3>
 
