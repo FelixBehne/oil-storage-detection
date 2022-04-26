@@ -14,7 +14,7 @@ There are different companies that already target these business cases:
 * [Orbitalinsights](https://www.oribitalinsights.com)
 # Dataset Overview
 ## Samples
-![example1](0a75eb88-46ba-4a64-acb3-8919ea880137.jpg)![example2](0f9798fb-d940-4355-828b-894cc998f6fa.jpg)
+![example1](tmp/0a75eb88-46ba-4a64-acb3-8919ea880137.jpg)![example2](tmp/0f9798fb-d940-4355-828b-894cc998f6fa.jpg)
 ## Stats
 - 98 Images
 - 2560x2560
