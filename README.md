@@ -1,25 +1,24 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/felixbehne/ReadME-Generator">
-    <img src="images/logo.png" alt="Logo" width="180" height="180">
+  <a href="https://github.com/felixbehne/oil-storage-detection">
+    <img src="images/logo.svg" alt="Logo" width="200" height="200">
   </a>
-
   <h3 align="center">Oil Storage Detection</h3>
 
   <p align="center">
     Kedro based computer vision pipeline for detection pol storage areas on satellite imagery. 
     <br/>
     <br/>
-    <a href="https://github.com/felixbehne/ReadME-Generator"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/felixbehne/oil-storage-detection"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
-    <a href="https://github.com/felixbehne/ReadME-Generator/issues">Report Bug</a>
+    <a href="https://github.com/felixbehne/oil-storage-detection/issues">Report Bug</a>
     .
-    <a href="https://github.com/felixbehne/ReadME-Generator/issues">Request Feature</a>
+    <a href="https://github.com/felixbehne/oil-storage-detection/issues">Request Feature</a>
   </p>
 </p>
 
-![Contributors](https://img.shields.io/github/contributors/felixbehne/ReadME-Generator?color=dark-green) ![Stargazers](https://img.shields.io/github/stars/felixbehne/ReadME-Generator?style=social) ![Issues](https://img.shields.io/github/issues/felixbehne/ReadME-Generator) ![License](https://img.shields.io/github/license/felixbehne/ReadME-Generator) 
+![Contributors](https://img.shields.io/github/contributors/felixbehne/oil-storage-detection?color=dark-green) ![Stargazers](https://img.shields.io/github/stars/felixbehne/oil-storage-detection?style=social) ![Issues](https://img.shields.io/github/issues/felixbehne/oil-storage-detection) ![License](https://img.shields.io/github/license/felixbehne/oil-storage-detection) 
 
 ## Table Of Contents
 
@@ -28,8 +27,6 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
 * [Authors](#authors)
