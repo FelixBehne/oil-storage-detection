@@ -6,7 +6,7 @@
   <h3 align="center">Oil Storage Detection</h3>
 
   <p align="center">
-    Kedro based computer vision pipeline for detection pol storage areas on satellite imagery. 
+    Kedro based computer vision pipeline for detecting petroleum, oil and lubricant (pol)) storage areas on satellite imagery. 
     <br/>
     <br/>
     <a href="https://github.com/felixbehne/oil-storage-detection"><strong>Explore the docs »</strong></a>
