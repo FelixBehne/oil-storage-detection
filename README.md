@@ -105,4 +105,5 @@ Distributed under the MIT License. See [LICENSE](https://github.com/felixbehne/o
 
 ## Acknowledgements
 
-* [ImgShields](https://shields.io/)
+* [Kaggle](https://kaggle.com) - For hosting the dataset used. 
+* [Airbusgeo](https://www.kaggle.com/datasets/airbusgeo/airbus-oil-storage-detection-dataset/metadata) - For providing the data free of charge. 
