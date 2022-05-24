@@ -161,3 +161,6 @@ venv.bak/
 # tmp files 
 tmp.py
 /tmp
+
+# vscode 
+/.vscode
