@@ -1,7 +1,7 @@
 """Module for creating the data preprocessing pipeline."""
 
 from kedro.pipeline import Pipeline, node, pipeline
-from .nodes import get_image_names, preprocess_labels
+from .nodes import generate_label_map, preprocess_labels, train_test_split_node
 
 
 def create_pipeline() -> Pipeline:
@@ -13,16 +13,32 @@ def create_pipeline() -> Pipeline:
     return pipeline(
         [
             node(
-                func=get_image_names,
-                inputs=None,
-                outputs="image_names",
-                name="get_image_names_node",
+                func=generate_label_map,
+                inputs=["params:classes", "params:start"],
+                outputs="label_map",
+                name="generate_label_map_node",
             ),
             node(
                 func=preprocess_labels,
                 inputs="annotations",
                 outputs="labels",
                 name="preprocess_labels_node",
+            ),
+            node(
+                func=train_test_split_node,
+                inputs=[
+                    "labels",
+                    "params:train_ratio",
+                    "params:validation_ratio",
+                    "params:test_ratio",
+                    "params:random_state",
+                ],
+                outputs=[
+                    "train_image_names",
+                    "test_image_names",
+                    "validation_image_names",
+                ],
+                name="train_test_split_node",
             ),
         ]
     )

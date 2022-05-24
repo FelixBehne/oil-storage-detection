@@ -3,12 +3,27 @@ annotations:
   filepath: data/01_raw/annotations.csv
   layer: Raw
 
-labels:  
+labels:
   type: pandas.CSVDataSet
   filepath: data/03_primary/labels.csv
   layer: Primary
 
-image_names:  
+label_map:
+  type: text.TextDataSet
+  filepath: data/03_primary/label_map.pbtxt
+  layer: Feature
+
+train_image_names:
   type: pandas.CSVDataSet
-  filepath: data/03_primary/image_names.csv
-  layer: Primary
+  filepath: data/04_feature/annotations/train_image_names.csv
+  layer: Feature
+
+test_image_names:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/annotations/test_image_names.csv
+  layer: Feature
+
+validation_image_names:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/annotations/validation_image_names.csv
+  layer: Feature
