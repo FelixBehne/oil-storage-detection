@@ -6,3 +6,5 @@ train_ratio: 0.8
 validation_ratio: 0.1
 test_ratio: 0.1
 random_state: 49
+image_width: 2560
+image_height: 2560

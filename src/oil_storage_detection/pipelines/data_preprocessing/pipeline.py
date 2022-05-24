@@ -1,7 +1,12 @@
 """Module for creating the data preprocessing pipeline."""
 
 from kedro.pipeline import Pipeline, node, pipeline
-from .nodes import generate_label_map, preprocess_labels, train_test_split_node
+from .nodes import (
+    convert_to_tfrecords,
+    generate_label_map,
+    preprocess_labels,
+    train_test_split_node,
+)
 
 
 def create_pipeline() -> Pipeline:
@@ -39,6 +44,18 @@ def create_pipeline() -> Pipeline:
                     "validation_image_names",
                 ],
                 name="train_test_split_node",
+            ),
+            node(
+                func=convert_to_tfrecords,
+                inputs=[
+                    "train_image_names",
+                    "test_image_names",
+                    "validation_image_names",
+                    "params:image_width",
+                    "params:image_height",
+                ],
+                outputs=["train_records", "test_records", "validation_records",],
+                name="convert_to_tfrecords_node",
             ),
         ]
     )

@@ -1,13 +1,16 @@
+############################## Raw ##############################
 annotations:
   type: pandas.CSVDataSet
   filepath: data/01_raw/annotations.csv
   layer: Raw
 
+############################## Primary ##############################
 labels:
   type: pandas.CSVDataSet
   filepath: data/03_primary/labels.csv
   layer: Primary
 
+############################## Feature ##############################
 label_map:
   type: text.TextDataSet
   filepath: data/03_primary/label_map.pbtxt
@@ -27,3 +30,19 @@ validation_image_names:
   type: pandas.CSVDataSet
   filepath: data/04_feature/annotations/validation_image_names.csv
   layer: Feature
+
+############################## Model Input ##############################
+train_records:
+  type: oil_storage_detection.extras.datasets.tensorflow_record_dataset.TensorflowRecordDataset
+  filepath: data/05_model_input/train.tfrecord
+  layer: Model Input
+
+test_records:
+  type: oil_storage_detection.extras.datasets.tensorflow_record_dataset.TensorflowRecordDataset
+  filepath: data/05_model_input/test.tfrecord
+  layer: Model Input
+
+validation_records:
+  type: oil_storage_detection.extras.datasets.tensorflow_record_dataset.TensorflowRecordDataset
+  filepath: data/05_model_input/validation.tfrecord
+  layer: Model Input
