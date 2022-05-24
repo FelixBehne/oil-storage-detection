@@ -14,7 +14,7 @@ def create_pipeline() -> Pipeline:
         [
             node(
                 func=get_image_names,
-                inputs="",
+                inputs=None,
                 outputs="image_names",
                 name="get_image_names_node",
             ),

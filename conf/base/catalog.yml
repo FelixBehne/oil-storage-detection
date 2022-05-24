@@ -2,3 +2,13 @@ annotations:
   type: pandas.CSVDataSet
   filepath: data/01_raw/annotations.csv
   layer: Raw
+
+labels:  
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/labels.csv
+  layer: Primary
+
+image_names:  
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/image_names.csv
+  layer: Primary
