@@ -161,7 +161,7 @@ def train_test_split_node(
     """
 
     train_image_names, test_image_names = train_test_split(
-        labels, test_size=1 - train_ratio, random_state=random_state
+        labels, train_size=train_ratio, random_state=random_state
     )
 
     val_image_names, test_image_names = train_test_split(
@@ -170,22 +170,24 @@ def train_test_split_node(
         random_state=random_state,
     )
 
-    # copy images to model_input folder
+    # create dirs
+    os.makedirs("./data/04_feature/images/test", exist_ok=True)
     os.makedirs("./data/04_feature/images/train", exist_ok=True)
+    os.makedirs("./data/04_feature/images/validation", exist_ok=True)
+
+    # copy images to model_input folder
     log.info(f"Writing {train_image_names.shape[0]} trainings images... ")
     for image_name in train_image_names["image_id"]:
         shutil.copy(
             f"./data/01_raw/images/{image_name}.jpg",
             f"./data/04_feature/images/train/{image_name}.jpg",
         )
-    os.makedirs("../data/04_feature/images/validation", exist_ok=True)
     log.info(f"Writing {val_image_names.shape[0]} validation images... ")
     for image_name in val_image_names["image_id"]:
         shutil.copy(
             f"./data/01_raw/images/{image_name}.jpg",
             f"./data/04_feature/images/validation/{image_name}.jpg",
         )
-    os.makedirs("../data/04_feature/images/test", exist_ok=True)
     log.info(f"Writing {test_image_names.shape[0]} test images... ")
     for image_name in test_image_names["image_id"]:
         shutil.copy(
