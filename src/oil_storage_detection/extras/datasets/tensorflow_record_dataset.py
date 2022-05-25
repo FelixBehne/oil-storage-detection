@@ -4,7 +4,7 @@ from typing import Any, Dict
 
 import fsspec
 import numpy as np
-import tensorflow.compat.v1 as tf
+import tensorflow as tf
 from kedro.io import AbstractDataSet
 from kedro.io.core import get_filepath_str, get_protocol_and_path
 
@@ -43,11 +43,11 @@ class TensorflowRecordDataset(AbstractDataSet):
         """Saves image data to the specified filepath."""
         save_path = get_filepath_str(self._filepath, self._protocol)
 
-        writer = tf.python_io.TFRecordWriter(save_path)
-
-        for record in tf_records:
-            writer.write(record.SerializeToString())
-        writer.close()
+        # Write the `tf.train.Example` observations to the file.
+        with tf.io.TFRecordWriter(save_path) as writer:
+            for record in tf_records:
+                writer.write(record.SerializeToString())
+            writer.close()
 
     def _describe(self) -> Dict[str, Any]:
         """Returns a dict that describes the attributes of the dataset."""

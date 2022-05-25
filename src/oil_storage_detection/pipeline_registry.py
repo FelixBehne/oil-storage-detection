@@ -2,7 +2,10 @@
 from typing import Dict
 
 from kedro.pipeline import Pipeline, pipeline
-from oil_storage_detection.pipelines import data_preprocessing as dp
+import warnings
+with warnings.catch_warnings():
+    warnings.filterwarnings("ignore",category=DeprecationWarning)
+    from oil_storage_detection.pipelines import data_preprocessing as dp
 
 
 def register_pipelines() -> Dict[str, Pipeline]:
