@@ -10,7 +10,6 @@ from ast import literal_eval
 from pathlib import Path
 
 import pandas as pd
-from sqlalchemy import column
 import tensorflow.compat.v1 as tf
 from google.protobuf import text_format
 from object_detection.protos.string_int_label_map_pb2 import (
