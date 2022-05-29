@@ -9,10 +9,14 @@ formatters:
 
 handlers:
     console:
-        class: logging.StreamHandler
+        class: kedro.extras.logging.ColorHandler
         level: INFO
         formatter: simple
         stream: ext://sys.stdout
+        colors:
+            debug: magenta
+            info: green
+            warning: yellow
 
     info_file_handler:
         class: logging.handlers.RotatingFileHandler
