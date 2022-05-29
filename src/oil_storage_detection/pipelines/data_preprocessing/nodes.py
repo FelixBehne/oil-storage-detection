@@ -50,10 +50,10 @@ def _create_tf_records_from_files(
             annotations["image_id"] == image_filename[:-4]
         ]
 
-        xmins = annotations_filtered["bbox_x1"].values
-        xmaxs = annotations_filtered["bbox_x2"].values
-        ymins = annotations_filtered["bbox_y1"].values
-        ymaxs = annotations_filtered["bbox_y2"].values
+        xmins = annotations_filtered["bbox_x1"].values / image_width
+        xmaxs = annotations_filtered["bbox_x2"].values / image_width
+        ymins = annotations_filtered["bbox_y1"].values / image_height
+        ymaxs = annotations_filtered["bbox_y2"].values / image_height
 
         class_name = "OST".encode("utf8")
 
