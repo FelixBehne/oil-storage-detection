@@ -214,6 +214,18 @@ def convert_to_tfrecords(
     image_width: int,
     image_height: int,
 ):
+    """Converts images along with records to valid tfrecord files.
+
+    Args:
+        train_image_names (pd.DataFrame): _description_
+        test_image_names (pd.DataFrame): _description_
+        val_image_names (pd.DataFrame): _description_
+        image_width (int): _description_
+        image_height (int): _description_
+
+    Returns:
+        _type_: _description_
+    """
 
     # create tfrecords from images and annotations
     with warnings.catch_warnings():
@@ -238,3 +250,5 @@ def convert_to_tfrecords(
         )
 
     return tf_train_records, tf_test_records, tf_valid_records
+
+
