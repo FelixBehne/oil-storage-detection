@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/felixbehne/oil-storage-detection">
-    <img src="images/logo.svg" alt="Logo" width="300" height="300">
+    <img src="readme_assets/logo.svg" alt="Logo" width="300" height="300">
   </a>
   <h3 align="center">Oil Storage Detection</h3>
 
@@ -34,7 +34,7 @@
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
+![Screen Shot](readme_assets/eval_side_by_side.png)
 
 Aboveground Petroleum, Oil and Lubricant (POL) storage areas are common in manufacturing and government facilities. They fall under critical infrastructure for transportation (e.g. vehicles, ships and aircraft) and manufacturing industries (e.g. refineries, power stations, manufacturing). 
  
